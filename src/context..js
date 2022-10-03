@@ -12,7 +12,7 @@ const AppProvider = ({children}) => {
     const fetchBooks = useCallback(async() => {
         setLoading(true);
         try{
-            const response = await fetch(`${URL}${searchTerm}`,{referrerPolicy: "unsafe_url"} );
+            const response = await fetch(`${URL}${searchTerm}`,);
             const data = await response.json();
             const {docs} = data;
 
